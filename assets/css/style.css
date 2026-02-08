@@ -1,0 +1,185 @@
+:root {
+    --primary-orange: #f15a24;
+    --accent-purple: #6c63ff;
+    --bg-light: #f4f7f6;
+    --text-dark: #2c3e50;
+    --text-gray: #7f8c8d;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-red: #d32f2f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* AVISO DE TESTE */
+.aviso-teste {
+    background-color: #fff3cd;
+    border-bottom: 3px solid #ffc107;
+    padding: 12px 5%;
+    position: relative;
+    z-index: 1001;
+}
+
+.aviso-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #856404;
+    font-weight: 600;
+}
+
+.aviso-conteudo i {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+.aviso-fechar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #856404;
+    margin-left: auto;
+    padding: 0 5px;
+    line-height: 1;
+}
+
+.aviso-fechar:hover {
+    color: #533f03;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { height: 40px; }
+
+.btn-agendar {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agendar:hover { opacity: 0.9; transform: scale(1.05); }
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo-secao {
+    border-left: 5px solid var(--border-red);
+    padding-left: 15px;
+    margin: 40px 0 20px;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+/* GRID E CARDS */
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.card-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: var(--primary-orange);
+    border-radius: 12px 0 0 12px;
+}
+
+.card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+
+/* Novos Campos: Curso e Organizador */
+.info-meta {
+    font-size: 0.85rem;
+    color: var(--primary-orange);
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card p i { width: 22px; color: var(--primary-orange); }
+
+.local-tag {
+    background-color: #f0f4f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.solicitante {
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-size: 0.85rem !important;
+}
+
+/* ESTADO ENCERRADO */
+.card-muted {
+    opacity: 0.65;
+    filter: grayscale(0.5);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; text-align: center; }
+    .grid-eventos { grid-template-columns: 1fr; }
+}

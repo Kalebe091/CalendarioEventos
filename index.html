@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Anhanguera</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Aviso de Teste -->
+    <div class="aviso-teste">
+        <div class="aviso-conteudo">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Esta página está em período de teste e pode apresentar instabilidades.</span>
+            <button class="aviso-fechar" onclick="this.parentElement.parentElement.style.display='none'">&times;</button>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <img src="assets/img/logoanh.png" alt="Logo" class="logo">
+        <button class="btn-agendar">EVENTOS ANH</button>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2 class="titulo-secao">PRÓXIMOS EVENTOS</h2>
+            <div class="grid-eventos" id="proximos-grid">
+            </div>
+        </section>
+
+        <section class="encerrados">
+            <h2 class="titulo-secao">EVENTOS ENCERRADOS</h2>
+            <div class="grid-eventos" id="encerrados-grid">
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/eventos.js"></script>
+
+</body>
+
+</html>
