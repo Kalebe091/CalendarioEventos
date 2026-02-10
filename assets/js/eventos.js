@@ -1,18 +1,27 @@
 // Dados estáticos dos eventos
 const listaEventos = [
     {
-        titulo: "Aula Magna 2026.1: Ser psicóloga(o): Expectativas, Experiências e Responsabilidades",
-        curso: "Psicologia",
-        organizador: "Coordenação Acadêmica",
-        data: "2026-02-09",
+        titulo: "Aula Magna 2026.1: Onde há justiça, há Direito; onde há Direito, há compromisso com a sociedade.",
+        curso: "DIREITO",
+        organizador: "Coordenação de Direito",
+        data: "2026-02-09", // Evento Passado
         hora: "19:00 às 22:00",
         local: "Auditório",
+        solicitante: "Maria Clara"
+    },
+    {
+        titulo: "Aula Magna 2026.1: Ser psicóloga(o): Expectativas, Experiências e Responsabilidades",
+        curso: "Psicologia",
+        organizador: "Coordenação Psicologia",
+        data: "2026-02-09",
+        hora: "19:00 às 22:00",
+        local: "Sala 29/30",
         solicitante: "Clauber Torres"
     },
     {
-        titulo: "Aula Magna 2026.1",
-        curso: "COORDENAÇÃO",
-        organizador: "EAD",
+        titulo: "Aula Magna 2026.1: Alinhamento de expectativas e apresentação do curso",
+        curso: "EAD",
+        organizador: "Coordenação de EAD",
         data: "2026-02-02", // Evento Passado
         hora: "19:00 às 22:00",
         local: "Auditório",
@@ -25,11 +34,11 @@ const listaEventos = [
  */
 function formatarDataLonga(dataString) {
     const data = new Date(dataString + "T00:00:00"); // Força fuso local
-    return data.toLocaleDateString('pt-BR', { 
-        weekday: 'long', 
-        day: 'numeric', 
-        month: 'long', 
-        year: 'numeric' 
+    return data.toLocaleDateString('pt-BR', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
     });
 }
 
