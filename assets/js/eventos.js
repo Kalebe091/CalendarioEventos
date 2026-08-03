@@ -1,31 +1,49 @@
 // Dados estáticos dos eventos
 const listaEventos = [
     {
-        titulo: "Aula Magna 2026.1: Onde há justiça, há Direito; onde há Direito, há compromisso com a sociedade.",
-        curso: "DIREITO",
-        organizador: "Coordenação de Direito",
-        data: "2026-02-09", // Evento Passado
-        hora: "19:00 às 22:00",
-        local: "Auditório",
+        titulo: "Hydro nas Escolas",
+        curso: "EVENTO",
+        organizador: "Tanuzia e Marysa",
+        data: "2026-08-06",
+        hora: "08:00 às 17:00",
+        local: "AUDITÓRIO",
+        solicitante: "Tanuzia e Marysa"
+    },
+    {
+        titulo: "Aula Magna do curso de Psicologia 2026.2",
+        curso: "EVENTO",
+        organizador: "Clauber Wellington Pinheiro Torres",
+        data: "2026-08-10",
+        hora: "19:00 às 20:30",
+        local: "AUDITÓRIO",
+        solicitante: "Clauber Wellington Pinheiro Torres"
+    },
+    {
+        titulo: "Reunião de abertura do estágio clínico",
+        curso: "EVENTO",
+        organizador: "Stella Cezimbra",
+        data: "2026-08-17",
+        hora: "18:00 às 19:30",
+        local: "AUDITÓRIO",
+        solicitante: "Stella Cezimbra"
+    },
+    {
+        titulo: "I Simpósio da Comissão Estadual de Recuperação Judicial e Falências",
+        curso: "EVENTO",
+        organizador: "Maria Clara",
+        data: "2026-08-12",
+        hora: "19h às 22h",
+        local: "AUDITÓRIO",
         solicitante: "Maria Clara"
     },
     {
-        titulo: "Aula Magna 2026.1: Ser psicóloga(o): Expectativas, Experiências e Responsabilidades",
-        curso: "Psicologia",
-        organizador: "Coordenação Psicologia",
-        data: "2026-02-09",
-        hora: "19:00 às 22:00",
-        local: "Sala 29/30",
-        solicitante: "Clauber Torres"
-    },
-    {
-        titulo: "Aula Magna 2026.1: Alinhamento de expectativas e apresentação do curso",
-        curso: "EAD",
-        organizador: "Coordenação de EAD",
-        data: "2026-02-02", // Evento Passado
-        hora: "19:00 às 22:00",
-        local: "Auditório",
-        solicitante: "Ellen Borges"
+        titulo: "Aula Conjunta de Introdução de Biologia Celular e do Desenvolvimento",
+        curso: "EVENTO",
+        organizador: "Ana Paula Atanazio de Souza Evangelista",
+        data: "2026-08-05",
+        hora: "19 hs às 19:30",
+        local: "AUDITÓRIO",
+        solicitante: "Ana Paula Atanazio de Souza Evangelista"
     }
 ];
 
@@ -64,7 +82,7 @@ function renderizarPagina() {
                     <i class="fa-solid fa-location-dot"></i> ${ev.local}
                 </div>
                 <p class="solicitante">
-                    <i class="fa-solid fa-user"></i> Solicitado por: <strong>${ev.solicitante}</strong>
+                    <i class="fa-solid fa-user"></i> Responsável: <strong>${ev.solicitante}</strong>
                 </p>
             </div>
         `;
