@@ -59,7 +59,7 @@ function formatarDataLonga(dataString) {
         year: 'numeric'
     });
 }
-
+ 
 function renderizarPagina() {
     const containerProximos = document.getElementById('proximos-grid');
     const containerEncerrados = document.getElementById('encerrados-grid');
