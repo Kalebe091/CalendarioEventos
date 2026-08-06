@@ -67,7 +67,13 @@ function renderizarPagina() {
     const hoje = new Date();
     hoje.setHours(0, 0, 0, 0);
 
-    listaEventos.forEach(ev => {
+    const eventosOrdenados = [...listaEventos].sort((a, b) => {
+        const dataA = new Date(a.data + "T00:00:00");
+        const dataB = new Date(b.data + "T00:00:00");
+        return dataA - dataB;
+    });
+
+    eventosOrdenados.forEach(ev => {
         const dataEv = new Date(ev.data + "T00:00:00");
         const isEncerrado = dataEv < hoje;
 
